@@ -30,10 +30,8 @@ make && make install
 cd ../tmux-1.9
 LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local
 make && make install
-
 cd ~
-
-export PATH=$PATH:/usr/local/bin
+ln -s /usr/local/bin/tmux /usr/bin/tmux^
 
 rm -f libevent-2.0.21-stable.tar.gz
 rm -f tmux-1.8.tar.gz
